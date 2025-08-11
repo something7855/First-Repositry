@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice Assistant</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Voice Assistant</h1>
+      <p class="subtitle">Speak to interact. Your last 10 messages are below.</p>
+    </header>
+
+    <section class="controls">
+      <button id="startBtn" class="primary">Start Listening</button>
+      <button id="stopBtn" class="secondary" disabled>Stop</button>
+      <div id="status" class="status">Microphone idle</div>
+    </section>
+
+    <section class="live">
+      <h2>Recognized Speech</h2>
+      <div id="transcript" class="transcript">(nothing yet)</div>
+    </section>
+
+    <section class="reply">
+      <h2>Assistant Reply</h2>
+      <div id="replyText" class="reply-box">(waiting for your voice)</div>
+    </section>
+
+    <section class="history">
+      <h2>Recent Conversations</h2>
+      <ul id="historyList" class="history-list"></ul>
+    </section>
+
+    <footer>
+      <small>Tip: If you set your OPENAI_API_KEY, responses will be GPT-powered. Otherwise, a rule-based assistant will answer.</small>
+    </footer>
+  </div>
+
+  <script src="/static/js/script.js"></script>
+</body>
+</html>
